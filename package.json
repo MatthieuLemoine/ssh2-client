@@ -1,0 +1,36 @@
+{
+  "name": "ssh2-client",
+  "version": "0.0.1",
+  "description": "A Promise based wrapper around ssh2 to exec commands or setup a live shell on a remote host.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MatthieuLemoine/ssh2-client.git"
+  },
+  "keywords": [
+    "ssh2",
+    "command",
+    "exec",
+    "shell",
+    "live"
+  ],
+  "author": "MatthieuLemoine",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MatthieuLemoine/ssh2-client/issues"
+  },
+  "homepage": "https://github.com/MatthieuLemoine/ssh2-client#readme",
+  "dependencies": {
+    "ssh2": "^0.5.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.4.0",
+    "eslint-config-airbnb": "^11.0.0",
+    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-jsx-a11y": "^2.2.1",
+    "eslint-plugin-react": "^6.2.0"
+  }
+}

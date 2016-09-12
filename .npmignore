@@ -1,0 +1,6 @@
+node_modules
+lib
+examples
+.eslintrc.json
+.gitignore
+index.js

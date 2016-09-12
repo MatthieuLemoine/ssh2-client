@@ -1,8 +1,10 @@
 const ssh = require('../index');
 
+const HOST = 'junk@localhost';
+
 ssh
-  .exec('malem@localhost', 'touch junk')
-  .then(() => ssh.exec('malem@localhost', 'ls -l junk'))
+  .exec(HOST, 'touch junk')
+  .then(() => ssh.exec(HOST, 'ls -l junk'))
   .then((output) => {
     const { out, error } = output;
     console.log(out);

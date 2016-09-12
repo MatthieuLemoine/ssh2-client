@@ -1,6 +1,8 @@
 const ssh = require('../index');
 
+const HOST = 'junk@localhost';
+
 ssh
-  .shell('malem@localhost')
+  .shell(HOST)
   .then(() => console.log('Done'))
   .catch(err => console.error(err));

@@ -1,5 +1,5 @@
 node_modules
-lib
+/lib
 examples
 .eslintrc.json
 .gitignore

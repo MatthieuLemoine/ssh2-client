@@ -35,4 +35,21 @@ ssh
   .shell(HOST)
   .then(() => console.log('Done'))
   .catch(err => console.error(err));
+
+// Enable interactive password prompt
+// askPassword option is only needed for the first command
+const opts = {
+  askPassword : true
+};
+
+ssh
+  .exec(HOST, 'touch junk', opts)
+  .then(() => ssh.exec(HOST, 'ls -l junk'))
+  .then((output) => {
+    const { out, error } = output;
+    console.log(out);
+    console.error(error);
+  })
+  .catch(err => console.error(err));
+
 ```    

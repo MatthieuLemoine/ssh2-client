@@ -1,6 +1,6 @@
 {
   "name": "ssh2-client",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A Promise based wrapper around ssh2 to exec commands or setup a live shell on a remote host.",
   "main": "build/index.js",
   "scripts": {

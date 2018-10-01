@@ -5,7 +5,7 @@ const HOST = 'junk@localhost';
 // Enable interactive password prompt
 // Will be store in memory for following connections
 const opts = {
-  askPassword : true
+  askPassword: true
 };
 
 ssh

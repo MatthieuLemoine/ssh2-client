@@ -8,13 +8,14 @@ A Promise based wrapper around ssh2 to exec commands or setup a live shell on a 
 
 ## Usage
 
-- Execute a command on a remote host : ``ssh.exec(HOST, command)``
-- Open a live shell on a remote host : ``ssh.shell(HOST)``
+- Execute a command on a remote host : `ssh.exec(HOST, command, options)`
+- Open a live shell on a remote host : `ssh.shell(HOST, options)`
+
+`options` is optional. `options.ssh2` is forwarded to [ssh2](https://github.com/mscdex/ssh2).
 
 ## Examples
 
 ```javascript
-
 const ssh = require('ssh2-client');
 
 const HOST = 'junk@localhost';
@@ -23,7 +24,7 @@ const HOST = 'junk@localhost';
 ssh
   .exec(HOST, 'touch junk')
   .then(() => ssh.exec(HOST, 'ls -l junk'))
-  .then((output) => {
+  .then(output => {
     const { out, error } = output;
     console.log(out);
     console.error(error);
@@ -39,17 +40,16 @@ ssh
 // Enable interactive password prompt
 // askPassword option is only needed for the first command
 const opts = {
-  askPassword : true
+  askPassword: true,
 };
 
 ssh
   .exec(HOST, 'touch junk', opts)
   .then(() => ssh.exec(HOST, 'ls -l junk'))
-  .then((output) => {
+  .then(output => {
     const { out, error } = output;
     console.log(out);
     console.error(error);
   })
   .catch(err => console.error(err));
-
-```    
+```

@@ -1,6 +1,8 @@
 node_modules
-/lib
 examples
-.eslintrc.json
+.eslintrc
+.eslintignore
+.prettierrc
+.prettierignore
 .gitignore
-index.js
+yarn.lock
